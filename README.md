@@ -1,21 +1,21 @@
-<div>
-  <img src="https://user-images.githubusercontent.com/69850751/175876062-f252cc1b-bd44-46b3-9ddb-a7692b2eede4.png"     alt="">
-</div>
-
 ## Description ⚓
 
 The AirBnB project is simple copy of AirBnB website . we will not  implement all the features, only some of them to cover
 all fundamental concepts of the higher level programming track.
 
-The project currently only implements the back-end console.
+The project currently implement stoage abstraction usin MySQL
 
 ## Concepts to Learn ⏰
- - Unittest - and please work all together on tests cases
- - Python packages concept page
- - Serialization/Deserialization
- - *args, **kwargs
- - datetime
- - More coming soon!
+ - What is Unit testing and how to implement it in a large project
+ - What is *args and how to use it
+ - What is **kwargs and how to use it
+ - How to handle named arguments in a function
+ - How to create a MySQL database
+ - How to create a MySQL user and grant it privileges
+ - What ORM means
+ - How to map a Python Class to a MySQL table
+ - How to handle 2 different storage engines with the same codebase
+ - How to use environment variables
 
 ## Console 💻
 
