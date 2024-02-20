@@ -63,14 +63,14 @@ class BaseModel:
 
     def to_dict(self):
         """Convert instance into dict format"""
-        dct = self.__dict__.copy()
-        dct['__class__'] = self.__class__.__name__
-        for kw in dct:
-            if type(dct[kw]) is datetime:
-                dct[kw] = dct[kw].isoformat()
-        if '_sa_instance_state' in dct.keys():
-            del(dct['_sa_instance_state'])
-        return dct
+        dcty = self.__dict__.copy()
+        dcty['__class__'] = self.__class__.__name__
+        for kw in dcty:
+            if type(dcty[kw]) is datetime:
+                dcty[kw] = dcty[kw].isoformat()
+        if '_sa_instance_state' in dcty.keys():
+            del(dcty['_sa_instance_state'])
+        return dcty
 
     def delete(self):
         '''deletes instance from storage'''
