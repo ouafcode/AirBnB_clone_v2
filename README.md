@@ -16,7 +16,6 @@ The project currently implement stoage abstraction usin MySQL
  - How to map a Python Class to a MySQL table
  - How to handle 2 different storage engines with the same codebase
  - How to use environment variables
-
 ## Console 💻
 the console is command line interpreter that permits management of Backend of AirBnB project. 
  - create teh data model
