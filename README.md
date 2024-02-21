@@ -1,5 +1,4 @@
 ## Description ⚓
-
 The AirBnB project is simple copy of AirBnB website . we will not  implement all the features, only some
 all fundamental concepts of the higher level programming track.
 
