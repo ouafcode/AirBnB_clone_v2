@@ -55,7 +55,7 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb)
 $
-```
+``
 ## Authors
 * **Kaoutar En-Nabirha** <[KAWTREN]>
 * **Ouafae Saim**  <[ouafcode]>
