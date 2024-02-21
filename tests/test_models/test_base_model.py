@@ -148,7 +148,7 @@ class test_basemodel(unittest.TestCase):
 
     def test_kwargs_one(self):
         """test kwargs"""
-        n = {'Name': 'test'}
+        n = {'name': 'test'}
         new = self.value(**n)
         self.assertEqual(new.name, n['name'])
 
