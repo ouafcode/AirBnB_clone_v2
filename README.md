@@ -1,6 +1,6 @@
 ## Description ⚓
 
-The AirBnB project is simple copy of AirBnB website . we will not  implement all the features, only some of them to cover
+The AirBnB project is simple copy of AirBnB website . we will not  implement all the features, only some
 all fundamental concepts of the higher level programming track.
 
 The project currently implement stoage abstraction usin MySQL
@@ -23,7 +23,6 @@ the console is command line interpreter that permits management of Backend of Ai
  - create teh data model
  - manage (create, update, destroy, etc) objects via a console / command interpreter
  - store and persist objects to a file (JSON file)
-
 ### Using the Console
 
 The AirBnB console can be run both interactively and non-interactively. 
