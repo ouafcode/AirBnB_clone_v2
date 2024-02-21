@@ -29,7 +29,6 @@ of the file `console.py` at the command line.
 ```
 $ ./console.py
 (hbnb) help
-
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
