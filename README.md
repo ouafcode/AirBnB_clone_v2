@@ -56,7 +56,6 @@ EOF  help  quit
 (hbnb)
 $
 ```
-
 ## Authors
 * **Kaoutar En-Nabirha** <[KAWTREN]>
 * **Ouafae Saim**  <[ouafcode]>
