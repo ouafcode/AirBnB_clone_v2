@@ -94,7 +94,7 @@ class test_basemodel(unittest.TestCase):
         self.assertIsInstance(self.value().to_dict()['created_at'], str)
         self.assertIsInstance(self.value().to_dict()['updated_at'], str)
         # Testing output
-        datetime_now = datetime.today()
+        datetime_now = datetime.datetime.today()
         dl = self.value()
         dl.id = '58796'
         dl.created_at = dl.updated_at = datetime_now
@@ -137,7 +137,7 @@ class test_basemodel(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.value().to_dict(self.value())
         with self.assertRaises(TypeError):
-            self.value().to_dict(39)
+            self.value().to_dict(45)
         self.assertNotIn('_sa_instance_state', n)
 
     def test_kwargs_none(self):
@@ -149,8 +149,8 @@ class test_basemodel(unittest.TestCase):
     def test_kwargs_one(self):
         """test kwargs"""
         n = {'Name': 'test'}
-        with self.assertRaises(KeyError):
-            new = self.value(**n)
+        new = self.value(**n)
+        self.assertEqual(new.name, n['name'])
 
     def test_id(self):
         """test id"""

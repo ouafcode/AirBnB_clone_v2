@@ -13,7 +13,7 @@ from console import HBNBCommand
 from models import storage
 from models.base_model import BaseModel
 from models.user import User
-from tests import clear_stream
+from tests import clr_stream
 
 
 class TestHBNBCommand(unittest.TestCase):
@@ -28,15 +28,15 @@ class TestHBNBCommand(unittest.TestCase):
             const = HBNBCommand()
             const.onecmd('create Place name="CASA"')
             dl_id = cout.getvalue().strip()
-            clear_stream(cout)
+            clr_stream(cout)
             self.assertIn('Place.{}'.format(dl_id), storage.all().keys())
             const.onecmd('show Place {}'.format(dl_id))
             self.assertIn("'name': 'CASA'", cout.getvalue().strip())
-            clear_stream(cout)
+            clr_stream(cout)
             const.onecmd('create User name="ALI" age=25 height=5.9')
-            dl_id_id = cout.getvalue().strip()
+            dl_id = cout.getvalue().strip()
             self.assertIn('User.{}'.format(dl_id), storage.all().keys())
-            clear_stream(cout)
+            clr_stream(cout)
             const.onecmd('show User {}'.format(dl_id))
             self.assertIn("'name': 'ALI'", cout.getvalue().strip())
             self.assertIn("'age': 25", cout.getvalue().strip())
@@ -107,7 +107,7 @@ class TestHBNBCommand(unittest.TestCase):
             )
             curs = dbs.cursor()
             curs.execute('SELECT * FROM users WHERE id="{}"'.format(obj.id))
-            clear_stream(e)
+            clr_stream(e)
             e.onecmd('show User {}'.format(obj.id))
             result = cur.fetchone()
             self.assertTrue(res is not None)
@@ -137,11 +137,11 @@ class TestHBNBCommand(unittest.TestCase):
             res = cur.fetchone()
             prev_count = int(res[0])
             const.onecmd('create State name="CASA"')
-            clear_stream(e)
+            clr_stream(e)
             e.onecmd('count State')
             cnt = e.getvalue().strip()
             self.assertEqual(int(cnt), prev_count + 1)
-            clear_stream(e)
+            clr_stream(e)
             e.onecmd('count State')
             cur.close()
             dbs.close()
