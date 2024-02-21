@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''module for DBstorage tests'''
+"""module for DBstorage tests"""
 import unittest
 import MySQLdb
 from models.user import User
@@ -10,9 +10,9 @@ import os
 @unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') != 'db',
                  'db_storage test not supported')
 class TestDBStorage(unittest.TestCase):
-    '''test dbstorage'''
+    """test dbstorage"""
     def test_new_and_save(self):
-        '''test  new & save methods'''
+        """test  new & save methods"""
         db = MySQLdb.connect(user=os.getenv('HBNB_MYSQL_USER'),
                              host=os.getenv('HBNB_MYSQL_HOST'),
                              passwd=os.getenv('HBNB_MYSQL_PWD'),

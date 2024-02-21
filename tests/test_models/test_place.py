@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+"""tet place """
 from tests.test_models.test_base_model import test_basemodel
 from models.place import Place
 import os
@@ -50,7 +50,7 @@ class test_Place(test_basemodel):
                          type(None))
 
     def test_number_bathrooms(self):
-        """ test """
+        """ test bathrooms """
         new = self.value()
         self.assertEqual(type(new.number_bathrooms), int if
                          os.getenv('HBNB_TYPE_STORAGE') != 'db' else
