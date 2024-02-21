@@ -38,7 +38,6 @@ EOF  help  quit
 $
 ```
 also in non-interactive mode
-
 ```
 $ echo "help" | ./console.py
 (hbnb)
