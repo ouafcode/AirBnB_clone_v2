@@ -37,7 +37,6 @@ EOF  help  quit
 (hbnb) quit
 $
 ```
-
 also in non-interactive mode
 
 ```
