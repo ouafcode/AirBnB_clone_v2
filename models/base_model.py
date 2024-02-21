@@ -73,6 +73,6 @@ class BaseModel:
         return dcty
 
     def delete(self):
-        '''deletes instance from storage'''
+        """deletes instance from storage"""
         from models import storage
         storage.delete(self)

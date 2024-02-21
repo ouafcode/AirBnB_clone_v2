@@ -1,36 +1,35 @@
 #!/usr/bin/python3
-"""Tests for the AirBnb clone modules.
-"""
+"""Testing modules."""
 import os
 from typing import TextIO
 from models.engine.file_storage import FileStorage
 
 
-def clear_stream(stream: TextIO):
-    """Clears the contents of a given stream
+def clr_stream(stream: TextIO):
+    """Clear given stream
 
     Args:
-        stream (TextIO): The stream to clear.
+        stream (TextIO): stream to clear.
     """
     if stream.seekable():
         stream.seek(0)
         stream.truncate(0)
 
 
-def delete_file(file_path: str):
-    """Removes a file if it exists.
+def del_file(file_path: str):
+    """delete file if it exists.
     Args:
-        file_path (str): The name of the file to remove.
+        file_path (str): file name.
     """
     if os.path.isfile(file_path):
         os.unlink(file_path)
 
 
-def reset_store(store: FileStorage, file_path='file.json'):
-    """Resets the items in the given store.
+def res_store(store: FileStorage, file_path='file.json'):
+    """Reset given store.
     Args:
-        store (FileStorage): The FileStorage to reset.
-        file_path (str): The path to the store's file.
+        store (FileStorage): FileStorage to reset.
+        file_path (str): path to store file.
     """
     with open(file_path, mode='w') as file:
         file.write('{}')
@@ -38,14 +37,14 @@ def reset_store(store: FileStorage, file_path='file.json'):
             store.reload()
 
 
-def read_text_file(file_name):
-    """Reads the contents of a given file.
+def text_file(file_name):
+    """Read given file.
 
     Args:
-        file_name (str): The name of the file to read.
+        file_name (str): name file.
 
     Returns:
-        str: The contents of the file if it exists.
+        str: content of file.
     """
     lines = []
     if os.path.isfile(file_name):
@@ -55,12 +54,12 @@ def read_text_file(file_name):
     return ''.join(lines)
 
 
-def write_text_file(file_name, text):
-    """Writes a text to a given file.
+def wr_text_file(file_name, text):
+    """Write text.
 
     Args:
-        file_name (str): The name of the file to write to.
-        text (str): The content of the file.
+        file_name (str): file name.
+        text (str): content file.
     """
     with open(file_name, mode='w') as file:
         file.write(text)
