@@ -18,13 +18,11 @@ The project currently implement stoage abstraction usin MySQL
  - How to use environment variables
 
 ## Console 💻
-
 the console is command line interpreter that permits management of Backend of AirBnB project. 
  - create teh data model
  - manage (create, update, destroy, etc) objects via a console / command interpreter
  - store and persist objects to a file (JSON file)
 ### Using the Console
-
 The AirBnB console can be run both interactively and non-interactively. 
 To run the console in non-interactive mode, pipe any command(s) into an execution 
 of the file `console.py` at the command line.
