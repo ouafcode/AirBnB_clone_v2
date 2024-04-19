@@ -75,7 +75,7 @@ class DBStorage:
         """Create all tables in the database and initialize a new session."""
         Base.metadata.create_all(self.__engine)
         session_fct = sessionmaker(bind=self.__engine,
-                                       expire_on_commit=False)
+                                   expire_on_commit=False)
         Session = scoped_session(session_fct)
         self.__session = Session()
 
