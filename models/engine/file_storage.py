@@ -8,6 +8,10 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
 
+    @property
+    def cities(self):
+        """Retruns Cities in state"""
+
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         if cls is not None:
@@ -63,3 +67,7 @@ class FileStorage:
             del self.__objects["{}.{}".format(type(obj).__name__, obj.id)]
         except (AttributeError, KeyError):
             pass
+
+    def close(self):
+        """doc meth"""
+        self.reload()
